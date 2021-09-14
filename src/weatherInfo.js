@@ -52,7 +52,10 @@ function WeatherInfo(props) {
                         <div className="text-white"><strong>Max Temp</strong></div>
                         <div className="text-white ml-auto">{props.maxTemp}°C</div>
                     </div>
-                    
+
+                   
+    
+
                 </div>
             </div>
         </React.Fragment>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css';
 import Clock from 'react-live-clock';
 import WeatherInfo from './weatherInfo'
+import Search from './Search.js';
 
 class App extends React.Component {
   state = {
@@ -17,6 +18,27 @@ class App extends React.Component {
     maxTemp: null,
     weatherName: null,
     LocationMode: null
+  }
+  receiveData = async (val) => {
+    const data = val.data;
+    console.log(this.state);
+    this.setState(
+      {
+        temp: Math.round(data.main.temp),
+        locationName: data.name,
+        country: data.sys.country,
+        humidity: data.main.humidity,
+        visiblity: data.visibility,
+        windSpeed: data.wind.speed,
+        feelsLike: data.main.feels_like,
+        maxTemp: data.main.temp_max,
+        weatherName: data.weather[0].main,
+        LocationMode: true,
+        latitude:data.coord.lat,
+        longitude:data.coord.long
+      }
+    )
+    console.log(this.state);
   }
   componentDidMount() {
     if (navigator.geolocation) {
@@ -103,13 +125,7 @@ class App extends React.Component {
   else {
   return (
     <React.Fragment>
-      <div className="col-8 d-flex justify-content-center py-5  ">
-        <div className="col-6 app-bg d-flex flex-wrap py-3">
-          <div className="col-12">
-            <h2 className="text-white m-0">Please allow Location access</h2>
-          </div>
-        </div>
-      </div>
+      <Search sendData={this.receiveData}/>
     </React.Fragment>
   );
 }
