@@ -1,0 +1,48 @@
+.col-6{
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    text-align-last: inherit;
+
+}
+
+
+
+.CityName{
+    top: 50%;
+    left: 50%;
+    transform:  translate(90%,-260%);
+    background: #2f3640;
+    height: 50px;
+    border-radius: 50px;
+    padding: 10px;
+ 
+}
+.CountryName{
+    top: 50%;
+    left: 50%;
+    transform:  translate(100%,-260%);
+    background: #2f3640;
+    height: 50px;
+    border-radius: 50px;
+    padding: 10px;
+ 
+}
+.searchButton{
+    background: linear-gradient(90deg, #FFC107 0%, #A97C50 100%);
+    border-radius: 40px;
+      border: none;
+      color:black;
+      font-family: Rakkas;
+      align-content: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 40px;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-left: 50px;
+    margin-right: 34px;
+    transform:  translate(-100%,-250%);
+      margin-top: 3rem;
+      top: 8px;
+}
