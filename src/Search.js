@@ -17,7 +17,7 @@ const Search = (props) => {
         console.log(city,country);
         await axios({
             method: 'GET',
-            url: `http://api.openweathermap.org/data/2.5/weather?q=${city},${country},&appid=f4b372960c5401bff12c77e94d4a943a`
+            url: `https://api.openweathermap.org/data/2.5/weather?q=${city},${country},&appid=f4b372960c5401bff12c77e94d4a943a`
         }).then((res) => {
             console.log(res.data);
             setTemp(res.data.main.temp-273.15);
