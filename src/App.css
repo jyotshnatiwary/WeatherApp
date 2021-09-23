@@ -1,17 +1,18 @@
 .app-bg {
   background: linear-gradient(0deg, rgba(20, 2, 78, 0.2),rgba(60, 2, 75, 0.3)), url(./bg.jpg);
-  height: 43rem;
+  height: 35rem;
   max-width: 60rem;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   text-align: center;
   background-size: cover;
   background-repeat: no-repeat;
   -moz-box-align: center;
+  color: aquamarine;
 }
 .side-bg {
-  background-color: rgba(71, 1, 104, 0.7);
+  background-color: rgba(104, 1, 78, 0.7);
   height: 90vh;
-  width: 100vh;
+  width: 50vh;
 }
 body {
   background: radial-gradient(
